@@ -18,7 +18,7 @@ spec:
       - name: quotes-app
         image: quotes-app:latest
         ports:
-        - containerPort: 8000
+        - containerPort: 8000  # Make sure this matches Dockerfile
         resources:
           requests:
             memory: "64Mi"
@@ -29,12 +29,12 @@ spec:
         livenessProbe:
           httpGet:
             path: /
-            port: 8000
+            port: 8000  # Update this port
           initialDelaySeconds: 5
           periodSeconds: 10
         readinessProbe:
           httpGet:
             path: /
-            port: 8000
+            port: 8000  # Update this port
           initialDelaySeconds: 5
           periodSeconds: 10

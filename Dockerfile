@@ -9,11 +9,8 @@ COPY index.html .
 COPY style.css .
 COPY script.js .
 
-# Install Python HTTP server
-RUN pip install --no-cache-dir http-server
-
 # Expose port 8000
 EXPOSE 8000
 
-# Start HTTP server
+# Start Python's built-in HTTP server (NO pip install needed)
 CMD ["python", "-m", "http.server", "8000"]
