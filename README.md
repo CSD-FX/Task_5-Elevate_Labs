@@ -10,9 +10,9 @@ Deploy and manage applications in Kubernetes locally using Minikube, demonstrati
 
 🛠️ Tech Stack & Tools
 
-Frontend: HTML5, CSS3, JavaScript (ES6+)
-Containerization: Docker
-Orchestration: Kubernetes, Minikube
-Web Server: Python HTTP Server
-Infrastructure: AWS EC2 Ubuntu
-Version Control: Git
+ * Frontend: HTML5, CSS3, JavaScript (ES6+)
+ * Containerization: Docker
+ * Orchestration: Kubernetes, Minikube
+ * Web Server: Python HTTP Server
+ * Infrastructure: AWS EC2 Ubuntu
+ * Version Control: Git
