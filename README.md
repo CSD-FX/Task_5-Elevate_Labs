@@ -16,3 +16,21 @@ Deploy and manage applications in Kubernetes locally using Minikube, demonstrati
  * Web Server: Python HTTP Server
  * Infrastructure: AWS EC2 Ubuntu
  * Version Control: Git
+
+---
+
+📁 Project Structure
+``
+Task_5-Elevate_Labs/
+├── Dockerfile                 # Container configuration
+├── k8s/                       # Kubernetes manifests
+│   ├── deployment.yaml        # App deployment configuration
+│   └── service.yaml           # Service exposure configuration
+├── index.html                 # Main quotes application page
+├── contact.html               # Contact information page
+├── style.css                  # Beautiful styles and animations
+├── script.js                  # Interactive functionality
+├── setup-minikube.sh          # Environment setup script
+├── deploy-app.sh              # Deployment automation script
+└── access-app.sh              # Access instructions script
+``
