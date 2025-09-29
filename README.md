@@ -46,7 +46,8 @@ Task_5-Elevate_Labs/
 ### Phase 1: Environment Setup
 1. **EC2 Instance Configuration**
    - Launched Ubuntu 22.04 EC2 instance
-   - Configured security groups for necessary access
+   - T3.MEDIUM and 15GB Storage 
+   - Configured security groups for necessary access (SSH, HTTP, HTTPS, 30000)
 
 2. **Tool Installation**
    - Installed Docker for containerization
