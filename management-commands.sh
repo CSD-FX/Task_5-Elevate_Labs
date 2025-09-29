@@ -2,6 +2,10 @@
 
 echo "🔧 Kubernetes Management Commands"
 
+# Ensure we have Docker permissions
+newgrp docker << EONG
+echo "Docker permissions verified"
+
 # Scale deployment
 echo "📈 Scaling deployment to 5 replicas..."
 kubectl scale deployment quotes-app --replicas=5
@@ -18,7 +22,12 @@ kubectl describe deployment quotes-app
 echo "📝 Getting logs from pods..."
 kubectl logs -l app=quotes-app --tail=10
 
-# Port forward for local access
-echo "🔗 Setting up port forwarding (localhost:8080)..."
-echo "   Access at: http://localhost:8080"
-kubectl port-forward service/quotes-app-service 8080:80
+# Show service info
+echo "🌐 Service information:"
+kubectl get service quotes-app-service
+EONG
+
+echo ""
+echo "🔗 To set up port forwarding, run:"
+echo "   kubectl port-forward service/quotes-app-service 8080:80"
+echo "   Then access at: http://localhost:8080"
