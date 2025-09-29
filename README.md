@@ -107,9 +107,6 @@ newgrp docker
 ```bash
 # Get access instructions
 ./access-app.sh
-
-# Then run port forwarding (keep terminal open)
-kubectl port-forward --address 0.0.0.0 service/quotes-app-service 30000:8000
 ```
 ### Step 5: Access in Browser
 ``
