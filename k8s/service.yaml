@@ -7,6 +7,7 @@ spec:
     app: quotes-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8000  # This should match containerPort in deployment
-  type: LoadBalancer
+      port: 8000
+      targetPort: 8000
+      nodePort: 30000
+  type: NodePort
