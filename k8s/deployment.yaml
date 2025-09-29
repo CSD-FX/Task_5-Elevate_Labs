@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quotes-app
+  labels:
+    app: quotes-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: quotes-app
+  template:
+    metadata:
+      labels:
+        app: quotes-app
+    spec:
+      containers:
+      - name: quotes-app
+        image: quotes-app:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10

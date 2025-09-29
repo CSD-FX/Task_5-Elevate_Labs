@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspirational Quotes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <header>
+            <h1>🌟 Daily Inspiration 🌟</h1>
+            <p>Find your motivation with these beautiful quotes</p>
+        </header>
+        
+        <main>
+            <div class="quote-card">
+                <div class="quote-text" id="quoteText">
+                    "The only way to do great work is to love what you do."
+                </div>
+                <div class="quote-author" id="quoteAuthor">
+                    - Steve Jobs
+                </div>
+                <button class="new-quote-btn" id="newQuoteBtn">
+                    ✨ New Quote
+                </button>
+            </div>
+            
+            <div class="info">
+                <p>Quotes refresh every 10 seconds automatically</p>
+                <p class="pod-info">Pod: <span id="podInfo">Loading...</span></p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Running on Kubernetes 🚀 | Minikube Cluster</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
