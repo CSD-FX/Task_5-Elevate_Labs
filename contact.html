@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .thank-you-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 2rem;
+        }
+        
+        .thank-you-title {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .thank-you-message {
+            color: #666;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-details {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(255,255,255,0.8);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+        }
+        
+        .contact-value {
+            color: #666;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .nav-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="contact-container">
+        <div class="thank-you-card">
+            <h1 class="thank-you-title">🎉 Thank You Elevate Labs! 🎉</h1>
+            <p class="thank-you-message">
+                I'm deeply grateful for this incredible internship opportunity that has allowed me 
+                to explore Kubernetes, Docker, and cloud-native technologies. This project has been 
+                an amazing learning experience in modern DevOps practices.
+            </p>
+            
+            <div class="contact-details">
+                <h2 style="color: #333; margin-bottom: 2rem;">Project Developed By</h2>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">👨‍💻</div>
+                    <div class="contact-info">
+                        <span class="contact-label">Name</span>
+                        <span class="contact-value">Chandrashekar D</span>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-info">
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value">+91 7975958224</span>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-info">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">devops16008121@gmail.com</span>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">🐙</div>
+                    <div class="contact-info">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">
+                            <a href="https://github.com/CSD-FX" style="color: #667eea; text-decoration: none;">
+                                https://github.com/CSD-FX
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-buttons">
+            <a href="/" class="nav-btn">🏠 Quotes App</a>
+            <a href="/contact.html" class="nav-btn" style="background: linear-gradient(45deg, #f093fb, #f5576c);">📞 Contact</a>
+        </div>
+    </div>
+</body>
+</html>
