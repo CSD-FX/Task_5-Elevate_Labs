@@ -1,12 +1,23 @@
 #!/bin/bash
-echo "🌐 Accessing Your Quotes App..."
-NODE_PORT=$(kubectl get service quotes-app-service -o jsonpath='{.spec.ports[0].nodePort}')
+
+echo "Accessing Your Quotes App..."
+
+# Check if cluster is running
+if ! minikube status > /dev/null 2>&1; then
+    echo "Error: Minikube cluster is not running. Please run ./setup-minikube.sh first."
+    exit 1
+fi
+
+# Get service information
+NODE_PORT=$(kubectl get service quotes-app-service -o jsonpath='{.spec.ports[0].nodePort}' 2>/dev/null || echo "30000")
 MINIKUBE_IP=$(minikube ip)
-echo "📱 Access via Minikube: http://$MINIKUBE_IP:$NODE_PORT"
+PUBLIC_IP=$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4)
+
+echo "Access URLs:"
+echo "Minikube Internal: http://$MINIKUBE_IP:$NODE_PORT"
+echo "EC2 Public IP:     http://$PUBLIC_IP:$NODE_PORT"
 echo ""
-echo "🔧 To get EC2 public access:"
-echo "1. Add Security Group rule for port $NODE_PORT"
-echo "2. Access via: http://$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4):$NODE_PORT"
+echo "To test connectivity:"
+echo "curl http://$MINIKUBE_IP:$NODE_PORT"
 echo ""
-echo "🎯 Quick test:"
-curl -s http://$MINIKUBE_IP:$NODE_PORT | head -10
+echo "Note: If using public IP, ensure security group allows inbound traffic on port $NODE_PORT"
